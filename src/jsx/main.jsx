@@ -1,40 +1,61 @@
-var React = require('react')
+var React = require('react');
 
 var Router = require('react-router')
     , RouteHandler = Router.RouteHandler
     , Route = Router.Route;
 
 var ReactBootstrap = require('react-bootstrap')
-    , Nav = ReactBootstrap.Nav;
+    , Nav = ReactBootstrap.Nav
+    , Navbar = ReactBootstrap.Navbar
+    , NavItem = ReactBootstrap.NavItem
+    , ButtonToolbar = ReactBootstrap.ButtonToolbar
+    , Button = ReactBootstrap.Button
+    , DropdownButton = ReactBootstrap.DropdownButton
+    , MenuItem = ReactBootstrap.MenuItem
+    ;
 
 var ReactRouterBootstrap = require('react-router-bootstrap')
-    , Navbar = ReactRouterBootstrap.NavBar
-    , NavItem = ReactRouterBootstrap.NavItem
-    , DropdownButton = ReactRouterBootstrap.DropdownButton
-    , NavItemLink = ReactRouterBootstrap.NavItemLink
-    , MenuItem = ReactRouterBootstrap.MenuItem
+//    , NavItem = ReactRouterBootstrap.NavItem
+//    , DropdownButton = ReactRouterBootstrap.DropdownButton
+//    , NavItemLink = ReactRouterBootstrap.NavItemLink
+//    , MenuItem = ReactRouterBootstrap.MenuItem
     , MenuItemLink = ReactRouterBootstrap.MenuItemLink
-    , ButtonLink = ReactRouterBootstrap.ButtonLink;
+    , ButtonLink = ReactRouterBootstrap.ButtonLink
+    ;
 
 var App = React.createClass({
     render: function () {
         return (
             <div>
+                <Navbar brand="React-Bootstrap">
+                    <Nav>
+                        <NavItem eventKey={1} href="#">Link</NavItem>
+                        <NavItem eventKey={2} href="#">Link</NavItem>
+                        <DropdownButton eventKey={3} title="Dropdown">
+                            <MenuItem eventKey="1">Action</MenuItem>
+                            <MenuItem eventKey="2">Another action</MenuItem>
+                            <MenuItem eventKey="3">Something else here</MenuItem>
+                            <MenuItem divider />
+                            <MenuItem eventKey="4">Separated link</MenuItem>
+                        </DropdownButton>
+                    </Nav>
+                </Navbar>
+
+                <ButtonToolbar>
+                    <Button>Default</Button>
+                    <Button bsStyle="primary">Primary</Button>
+                    <Button bsStyle="success">Success</Button>
+                    <Button bsStyle="info">Info</Button>
+                    <Button bsStyle="warning">Warning</Button>
+                    <Button bsStyle="danger">Danger</Button>
+                    <Button bsStyle="link">Link</Button>
+                </ButtonToolbar>
+
                 <ButtonLink to="destination" params={{ someparam: 'params' }} query={{some: 'query param'}}>Go</ButtonLink>
                 <RouteHandler/>
             </div>
             );
     }
-//            <Navbar ref="header" className="navbar navbar-inverse">
-//                <Nav className="navbar-left" eventKey={1}>
-//                    <NavItemLink to="dashboard" eventKey={2}>Dashboard</NavItemLink>
-//                    <DropdownButton eventKey={3} title="Admin">
-//                        <MenuItemLink to="users" eventKey={4}>Users</MenuItemLink>
-//                        <MenuItemLink to="projects" eventKey={5}>Projects</MenuItemLink>
-//                    </DropdownButton>
-//                </Nav>
-//            </Navbar>
-
 });
 
 var Destination = React.createClass({
@@ -46,6 +67,8 @@ var Destination = React.createClass({
 var routes = (
     <Route handler={App} path="/">
         <Route name="destination" path="destination/:someparam" handler={Destination}  />
+        <Route name="users" path="destination/:someparam" handler={Destination}  />
+        <Route name="projects" path="destination/:someparam" handler={Destination}  />
     </Route>
     );
 
