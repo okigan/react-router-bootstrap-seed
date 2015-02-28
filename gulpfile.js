@@ -3,8 +3,8 @@ var gulp = require('gulp'),
     browserify = require('gulp-browserify'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglifyjs'),
-
-    babel = require('gulp-babel');
+    babel = require('gulp-babel'),
+    server = require('gulp-server-livereload');
 
 gulp.task('default', function () {
     gulp.src(['src/jsx/*.jsx', 'src/js/*.js'])
@@ -16,3 +16,10 @@ gulp.task('default', function () {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('serve', function () {
+    gulp.src('.')
+        .pipe(server({
+            livereload: true,
+            open: true
+        }));
+});

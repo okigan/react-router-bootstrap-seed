@@ -19,6 +19,7 @@
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.5.2",
     "gulp-reactify": "^1.1.0",
+    "gulp-server-livereload": "^1.2.0",
     "gulp-uglifyjs": "^0.6.0"
   }
 }
