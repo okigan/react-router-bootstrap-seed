@@ -46,11 +46,12 @@ var App = React.createClass({
                 </Navbar>
 
                 <Grid>
-                    <Row className="show-grid">
+                    <Row>
                         <Col xs={12} md={8}>
                             <Jumbotron>
                                 <h1>Hello, world!</h1>
-                                <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                                <p>This is a simple hero unit, a simple jumbotron-style component for
+                                calling extra attention to featured content or information.</p>
                                 <p>
                                     <Button bsStyle="primary">Learn more</Button>
                                 </p>
@@ -67,6 +68,7 @@ var App = React.createClass({
                             </ButtonToolbar>
 
                             <ButtonLink to="destination" params={{ someparam: 'params' }} query={{some: 'query param'}}>Go</ButtonLink>
+
                             <RouteHandler/>
                         </Col>
                     </Row>
