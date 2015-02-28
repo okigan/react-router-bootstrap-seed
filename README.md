@@ -1,7 +1,7 @@
 # react-router-bootstrap-seed
 Starter project with gulp react router and bootstrap
 
-![Build Status](https://api.travis-ci.org/okigan/react-router-bootstrap-seed.svg)
+[![Build Status](https://travis-ci.org/okigan/react-router-bootstrap-seed.svg?branch=master)](https://travis-ci.org/okigan/react-router-bootstrap-seed)
 
 
 Seed project of [react-router](https://github.com/rackt/react-router), 
