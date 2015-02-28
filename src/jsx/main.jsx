@@ -12,6 +12,10 @@ var ReactBootstrap = require('react-bootstrap')
     , Button = ReactBootstrap.Button
     , DropdownButton = ReactBootstrap.DropdownButton
     , MenuItem = ReactBootstrap.MenuItem
+    , Jumbotron = ReactBootstrap.Jumbotron
+    , Row = ReactBootstrap.Row
+    , Col = ReactBootstrap.Col
+    , Grid = ReactBootstrap.Grid
     ;
 
 var ReactRouterBootstrap = require('react-router-bootstrap')
@@ -41,18 +45,33 @@ var App = React.createClass({
                     </Nav>
                 </Navbar>
 
-                <ButtonToolbar>
-                    <Button>Default</Button>
-                    <Button bsStyle="primary">Primary</Button>
-                    <Button bsStyle="success">Success</Button>
-                    <Button bsStyle="info">Info</Button>
-                    <Button bsStyle="warning">Warning</Button>
-                    <Button bsStyle="danger">Danger</Button>
-                    <Button bsStyle="link">Link</Button>
-                </ButtonToolbar>
+                <Grid>
+                    <Row className="show-grid">
+                        <Col xs={12} md={8}>
+                            <Jumbotron>
+                                <h1>Hello, world!</h1>
+                                <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                                <p>
+                                    <Button bsStyle="primary">Learn more</Button>
+                                </p>
+                            </Jumbotron>
 
-                <ButtonLink to="destination" params={{ someparam: 'params' }} query={{some: 'query param'}}>Go</ButtonLink>
-                <RouteHandler/>
+                            <ButtonToolbar>
+                                <Button>Default</Button>
+                                <Button bsStyle="primary">Primary</Button>
+                                <Button bsStyle="success">Success</Button>
+                                <Button bsStyle="info">Info</Button>
+                                <Button bsStyle="warning">Warning</Button>
+                                <Button bsStyle="danger">Danger</Button>
+                                <Button bsStyle="link">Link</Button>
+                            </ButtonToolbar>
+
+                            <ButtonLink to="destination" params={{ someparam: 'params' }} query={{some: 'query param'}}>Go</ButtonLink>
+                            <RouteHandler/>
+                        </Col>
+                    </Row>
+                </Grid>
+
             </div>
             );
     }
