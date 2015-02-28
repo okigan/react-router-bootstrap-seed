@@ -6,11 +6,11 @@ Starter project with gulp react router and bootstrap
 
 Seed project of [react-router](https://github.com/rackt/react-router), 
 [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap) and 
-[react-bootstrap-router](https://github.com/react-bootstrap/react-bootstrap-router).
+[react-bootstrap-router](https://github.com/mtscout6/react-router-bootstrap).
 
 
 Run
-npm install -g gulp
-npm install
-gulp
-gulp serve
+* npm install -g gulp
+* npm install
+* gulp
+* gulp serve
