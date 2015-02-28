@@ -1,0 +1,24 @@
+{
+  "name": "react-router-bootstrap-seed",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Igor Okulist",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^0.12.2",
+    "react-bootstrap": "^0.16.0",
+    "react-router": "^0.12.4",
+    "react-router-bootstrap": "^0.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-babel": "^4.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-reactify": "^1.1.0",
+    "gulp-uglifyjs": "^0.6.0"
+  }
+}
