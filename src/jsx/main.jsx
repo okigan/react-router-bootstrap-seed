@@ -19,18 +19,21 @@ var ReactRouterBootstrap = require('react-router-bootstrap')
 var App = React.createClass({
     render: function () {
         return (
-            <Navbar ref="header" className="navbar navbar-inverse" fixedTop={true} fluid={true} toggleNavKey={1}>
-                <Nav className="navbar-left" eventKey={1}>
-                    <NavItemLink to="dashboard" eventKey={2}>Dashboard</NavItemLink>
-                    <DropdownButton eventKey={3} title="Admin">
-                        <MenuItemLink to="users" eventKey={4}>Users</MenuItemLink>
-                        <MenuItemLink to="projects" eventKey={5}>Projects</MenuItemLink>
-                    </DropdownButton>
-                </Nav>
-            </Navbar>
-
+            <div>
+                <ButtonLink to="destination" params={{ someparam: 'params' }} query={{some: 'query param'}}>Go</ButtonLink>
+                <RouteHandler/>
+            </div>
             );
     }
+//            <Navbar ref="header" className="navbar navbar-inverse">
+//                <Nav className="navbar-left" eventKey={1}>
+//                    <NavItemLink to="dashboard" eventKey={2}>Dashboard</NavItemLink>
+//                    <DropdownButton eventKey={3} title="Admin">
+//                        <MenuItemLink to="users" eventKey={4}>Users</MenuItemLink>
+//                        <MenuItemLink to="projects" eventKey={5}>Projects</MenuItemLink>
+//                    </DropdownButton>
+//                </Nav>
+//            </Navbar>
 
 });
 
@@ -42,7 +45,7 @@ var Destination = React.createClass({
 
 var routes = (
     <Route handler={App} path="/">
-        <Route name="destination" path="destination/:someparam" handler={Destination} />
+        <Route name="destination" path="destination/:someparam" handler={Destination}  />
     </Route>
     );
 
